@@ -5,7 +5,7 @@ import Buttons from "../components/Buttons";
 
 export default function Home() {
   return (
-    <View>
+    <View className="flex flex-1 justify-center items-center box-border p-0 m-0">
       <Header />
       <Body />
       <Buttons />
