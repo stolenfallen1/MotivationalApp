@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 export default function Header() {
   return (
     <View>
-      <Text className="font-bold text-5xl tracking-tighter">HELLO WORLD</Text>
+      <Text className="italic text-4xl tracking-tighter">Quote of the Day</Text>
     </View>
   );
 }
