@@ -16,15 +16,34 @@ export default function WelcomePage() {
 
   return (
     <View className="flex-1 justify-center items-center">
-      <ImageBackground source={bg} resizeMode="cover" className="h-full w-full">
-        <Text className="font-bold text-5xl tracking-tighter text-center">
-          Your daily dose of motivation
-        </Text>
-        <Pressable onPress={redirectToHome}>
-          <Text className="mt-5 px-3 py-2 text-2xl tracking-tight bg-red-400">
-            Get started
+      <ImageBackground
+        source={bg}
+        resizeMode="cover"
+        style={{
+          flex: 1,
+          width: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <View
+          style={{
+            flex: 1,
+            width: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text className="font-bold text-white text-5xl tracking-tighter text-center">
+            Your daily dose of motivation
           </Text>
-        </Pressable>
+          <Pressable onPress={redirectToHome}>
+            <Text className="mt-5 px-3 py-2 text-2xl font-bold tracking-tight bg-red-400">
+              Get started
+            </Text>
+          </Pressable>
+        </View>
       </ImageBackground>
     </View>
   );
