@@ -8,7 +8,7 @@ export default function WelcomePage() {
   const navigation = useNavigation<WelcomePageNavigationProp>();
 
   const redirectToHome = (): void => {
-    // Navigate to the Login screen
+    // Navigate to the Home Screen
     navigation.navigate("Home");
   };
 
