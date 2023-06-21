@@ -9,10 +9,14 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View className="flex flex-1 justify-center items-center">
+    <View className="flex flex-1 p-0 m-0 box-border">
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Welcome" component={WelcomePage} />
+          <Stack.Screen
+            name="Welcome"
+            component={WelcomePage}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen name="Home" component={Header} />
         </Stack.Navigator>
       </NavigationContainer>
