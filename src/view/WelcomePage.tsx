@@ -4,14 +4,14 @@ import { StackNavigationProp } from "@react-navigation/stack";
 
 const bg = require("../Image/welcomeBG.jpeg");
 
-type WelcomePageNavigationProp = StackNavigationProp<{ Home: undefined }>;
+type WelcomePageNavigationProp = StackNavigationProp<{ Quotes: undefined }>;
 
 export default function WelcomePage() {
   const navigation = useNavigation<WelcomePageNavigationProp>();
 
   const redirectToHome = (): void => {
     // Navigate to the Home Screen
-    navigation.navigate("Home");
+    navigation.navigate("Quotes");
   };
 
   return (
