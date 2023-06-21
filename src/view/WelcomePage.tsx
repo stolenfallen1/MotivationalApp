@@ -1,6 +1,8 @@
-import { Pressable, Text, View } from "react-native";
+import { ImageBackground, Pressable, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
+
+const bg = require("../Image/welcomeBG.jpeg");
 
 type WelcomePageNavigationProp = StackNavigationProp<{ Home: undefined }>;
 
@@ -14,14 +16,16 @@ export default function WelcomePage() {
 
   return (
     <View className="flex-1 justify-center items-center">
-      <Text className="font-bold text-5xl tracking-tighter text-center">
-        Your daily dose of motivation
-      </Text>
-      <Pressable onPress={redirectToHome}>
-        <Text className="mt-5 px-3 py-2 text-2xl tracking-tight bg-red-400">
-          Get started
+      <ImageBackground source={bg} resizeMode="cover" className="h-full w-full">
+        <Text className="font-bold text-5xl tracking-tighter text-center">
+          Your daily dose of motivation
         </Text>
-      </Pressable>
+        <Pressable onPress={redirectToHome}>
+          <Text className="mt-5 px-3 py-2 text-2xl tracking-tight bg-red-400">
+            Get started
+          </Text>
+        </Pressable>
+      </ImageBackground>
     </View>
   );
 }

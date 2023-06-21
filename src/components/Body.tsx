@@ -7,9 +7,11 @@ export default function Body() {
       style={{ width: 350, height: 550 }}
     >
       <Text>TEST</Text>
-      <Pressable>
-        <Text>New Quote</Text>
-      </Pressable>
+      <View className="absolute bottom-3">
+        <Pressable>
+          <Text className="mt-2 px-3 py-2 text-lg bg-red-400">New Quote</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
