@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from "react-native";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Body() {
   const [Quote, setQuote] = useState();
@@ -13,6 +13,10 @@ export default function Body() {
         setAuthor(result.author);
       });
   };
+
+  useEffect(() => {
+    randomQuote();
+  }, []);
 
   return (
     <View
